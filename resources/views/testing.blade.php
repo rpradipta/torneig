@@ -25,16 +25,7 @@
         <link id="color-changer" rel="stylesheet" href="css/colors/red.css">
     </head>
 
-    <body class="dark">
-
-        <div class="preloader">
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-        </div>
-
+    <body class="dark">    
         <!-- <div class="preview-wrapper">
             <div class="switcher-head">
                 <span>Style Switcher</span>
