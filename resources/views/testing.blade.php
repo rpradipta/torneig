@@ -78,7 +78,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="welcome.html" class="hex-content">
+                                        <a href="./welcome" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="tf-dial"></i>

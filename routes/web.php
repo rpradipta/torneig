@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('testing');
 });
+Route::get('/welcome', function () {
+    return view('profile');
+});
+
