@@ -24,32 +24,7 @@
         <link id="color-changer" rel="stylesheet" href="css/colors/color-0.css">
     </head>
 
-    <body class="dark">
-
-        <div class="preloader">
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-            <div class="loading-mask"></div>
-        </div>
-
-        <div class="preview-wrapper">
-            <div class="switcher-head">
-                <span>Style Switcher</span>
-                <div class="switcher-trigger tf-tools"></div>
-            </div>
-
-            <div class="switcher-body">
-                <h4>Choose Color:</h4>
-                <ul class="color-options list-none">
-                    <li class="c0" data-color="color-0" title="Default">Default</li>
-                    <li class="c1" data-color="color-1" title="Red">Red</li>
-                    <li class="c2" data-color="color-2" title="Green">Green</li>
-                    <li class="c3" data-color="color-3" title="Blue">Blue</li>
-                </ul>
-            </div>
-        </div>
+    <body class="dark">      
 
         <main class="site-wrapper">
             <div class="pt-table">
@@ -59,31 +34,20 @@
                     <!-- /.close -->
 
                     <div class="author-image-large">
-                        <img src="img/author.png" alt="">
+                        <img src="img/pngegg.png" alt="">
                     </div>
                     
                     <div class="container">
                         <div class="row">
                             <div class="col-xs-12 col-md-6 col-lg-7">
                                 <div class="page-title">
-                                    <h2>David <span class="primary">ramon</span> <span class="title-bg">About</span></h2>
-                                    <p>A product designer from England, who focuses on interactive design & A freelance designer focusing on typography & clean interfaces. Also works in Google..</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores repellendus corporis, tenetur inventore perferendis reprehenderit autem dignissimos non quos unde eveniet sapiente necessitatibus consequuntur ea ab dolore, minus nam eaque.</p>
+                                    <h2>Toernig</h2>
+                                    <p>A simple yet powerful web app to create and manage a football tournament</p>
+                                    <p>Manage a tourney like you've never done before!</p>
                                 </div>
                             </div>
                         </div> <!-- /.row -->
-                    </div> <!-- /.container -->
-
-                    <nav class="page-nav clear">
-                        <div class="container">
-                            <div class="flex flex-middle space-between">
-                                <span class="prev-page"><a href="index.html" class="link">&larr; Prev Page</a></span>
-                                <span class="copyright hidden-xs">Copyright &copy; 2016 Phantom, All Rights Reserved.</span>
-                                <span class="next-page"><a href="about.html" class="link">Next Page &rarr;</a></span>
-                            </div>
-                        </div>
-                        <!-- /.page-nav -->
-                    </nav>
+                    </div> <!-- /.container -->                   
                     <!-- /.container -->
 
                 </div> <!-- /.pt-tablecell -->
