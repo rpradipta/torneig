@@ -4,7 +4,7 @@
         <!-- meta charset -->
         <meta charset="utf-8">
         <!-- site title -->
-        <title>Phantom | Personal Resume Template</title>
+        <title>Toernig</title>
         <!-- meta description -->
         <meta name="description" content="">
         <!-- mobile viwport meta -->
@@ -95,7 +95,7 @@
                                                 <span class="icon">
                                                     <i class="far fa-futbol"></i>
                                                 </span>
-                                                <span class="title">About</span>
+                                                <span class="title">Tournament</span>
                                             </span>
                                             <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -114,9 +114,9 @@
                                         <a href="services.html" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
-                                                    <i class="tf-tools-2"></i>
+                                                <i class="fas fa-futbol"></i>
                                                 </span>
-                                                <span class="title">Services</span>
+                                                <span class="title">League</span>
                                             </span>
                                             <svg viewbox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>    
