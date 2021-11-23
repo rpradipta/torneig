@@ -41,8 +41,10 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-6 col-lg-7">
                                 <div class="page-title">
-                                    <h2>Toernig</h2>
-                                    <p>A simple yet powerful web app to create and manage a football tournament</p>
+                                    <h2>Toernig</h2>                                    
+                                   <p>{{$league->name}} </p>
+                                   <p>{{$league->slug}} </p>                           
+                                   <p>A simple yet powerful web app to create and manage a football tournament</p>
                                     <p>Manage a tourney like you've never done before!</p>
                                 </div>
                             </div>

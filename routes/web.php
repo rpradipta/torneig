@@ -20,6 +20,8 @@ Route::get('/', function () {
 //     return view('testing');
 // });
 Route::get('/welcome', function () {
-    return view('profile');
+    $response = Http::get('https://api-football-standings.azharimm.site/leagues/eng.1');
+    $league = json_decode($response->body());
+    return view('profile')->with('league',$league);
 });
 
