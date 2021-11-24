@@ -63,11 +63,18 @@
                                             </tr>
                                         </thead>
                                         <tbody class="text-center">
-                                            @foreach($league['data']['standings'] as $standings)
+                                            @if(isset($league['data']['standings'])){
+                                                @foreach($league['data']['standings'] as $standings)
                                             <tr>
                                                 <td class="text-left number">{{$loop->index+1}}</td>
-                                                <td class="text-left"> <img
-                                                        src="{{$standings['team']['logos'][0]['href']}}"><span>{{$standings['team']['name']}}</span>
+                                                <td class="text-left">
+                                                    @if(isset($standings['team']['logos'][0]['href']))
+                                                        <img src="{{$standings['team']['logos'][0]['href']}}">
+                                                    
+                                                    @else
+                                                    <img src="{{ URL::asset('img/teamlogoplaceholder.png')}}">
+                                                    @endif
+                                                    <span>{{$standings['team']['name']}}</span>
                                                 </td>
                                                 <td>{{$standings['stats'][3]['displayValue']}}</td>
                                                 <td>{{$standings['stats'][0]['displayValue']}}</td>
@@ -79,6 +86,10 @@
                                                 <td>{{$standings['stats'][9]['displayValue']}}</td>
                                             </tr>
                                             @endforeach
+                                            }
+                                            @else
+                                            <h1>EMPTY</h1>
+                                            @endif                                            
                                         </tbody>
                                     </table>
                                 </div>
