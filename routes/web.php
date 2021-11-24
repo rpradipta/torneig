@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LeagueController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,14 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('testing');
+    return view('home');
 });
-// Route::get('/test', function () {
-//     return view('testing');
+
+// Route::get('/eng1', function () {
+//     // $standings = Http::get('https://api-football-standings.azharimm.site/leagues/eng.1/standings');
+//     // $leagueInfo = Http::get('https://api-football-standings.azharimm.site/leagues/eng.1');
+//     // $league = json_decode($standings->body(),true);   
+//     // $info = json_decode($leagueInfo->body(),true);
+//     // return view('leaguestandings', ['league' => $league, 'name'=> $info['data']['name'], 'logo' => $info['data']['logos']['dark']]);
 // });
-Route::get('/welcome', function () {
-    $response = Http::get('https://api-football-standings.azharimm.site/leagues/eng.1');
-    $league = json_decode($response->body());
-    return view('profile')->with('league',$league);
-});
+
+Route::get('/league/{id}', [LeagueController::class, 'standings']);
+
+Route::get('/league',[LeagueController::class, 'league']);
 

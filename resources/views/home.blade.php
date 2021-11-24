@@ -15,14 +15,16 @@
         <!-- ================================
         CSS Files
         ================================= -->
-        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800" rel="stylesheet">
-        <link rel="stylesheet" href="css/themefisher-fonts.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/dark.css">
-        <link href="css/all.css" rel="stylesheet"> 
-        <link id="color-changer" rel="stylesheet" href="css/colors/red.css">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ URL::asset('css/themefisher-fonts.min.css')}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{ URL::asset('css/dark.css')}}">
+        
+        <link href="{{ URL::asset('css/all.css')}}" rel="stylesheet"> 
+    
     </head>
 
     <body class="dark">    
@@ -69,7 +71,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="./welcome" class="hex-content">
+                                        <a href="./eng1" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="tf-dial"></i>
@@ -111,7 +113,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="services.html" class="hex-content">
+                                        <a href="./league/" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                 <i class="fas fa-futbol"></i>
