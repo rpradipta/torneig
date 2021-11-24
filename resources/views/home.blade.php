@@ -113,7 +113,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="./league/" class="hex-content">
+                                        <a href="./league" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                 <i class="fas fa-futbol"></i>

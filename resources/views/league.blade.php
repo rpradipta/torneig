@@ -37,7 +37,7 @@
     <section class="site-wrapper">
         <div class="pt-table">
             <div class="pt-tablecell page-services relative">
-                <a href="./" class="page-close"><i class="tf-ion-close"></i></a>
+                <a href=".." class="page-close"><i class="tf-ion-close"></i></a>
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-lg-offset-1 col-lg-10">
@@ -51,7 +51,7 @@
 
                             <div class="hexagon-menu services clear">
                                 @foreach($data as $data)
-                                <a href="./{{$data['id']}}">                                    
+                                <a href="/league/{{$data['id']}}">                                    
                                     <div class="service-hex">
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
