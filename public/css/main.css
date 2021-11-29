@@ -556,15 +556,15 @@ textarea, label {
     Welcome Page
 -------------------------------------------------*/
 .author-image-large {
-  position: absolute;
-  right: 0;
-  top: 0;
+  /* position: absolute; */
+  /* right: 0;
+  top: 0; */
 }
-.author-image-large img {
+/* .author-image-large img {
   height: -webkit-calc(100vh - 4px);
   height: -moz-calc(100vh - 4px);
   height: calc(100vh - 4px);
-}
+} */
 
 /*------------------------------------------------
     About Page

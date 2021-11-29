@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('css/main.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('css/dark.css')}}">
-    <link rel="stylesheet" href="{{ URL::asset('css/table.css')}}">    
+    <link rel="stylesheet" href="{{ URL::asset('css/table.css')}}">
 </head>
 
 <body class="dark">
@@ -35,64 +35,61 @@
                 <a href="./" class="page-close"><i class="tf-ion-close"></i></a>
                 <!-- /.close -->
 
-                <div class="author-image-large">
-                    <img src="{{$logo}}" alt="">
-                </div>
+               
 
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-md-6 col-lg-7">
                             <div class="page-title">
                                 <h2>{{$name}}</h2>
-                                <h2>{{$dump}}</h2>
-                                <div class="card">
-                                    <table
-                                        class="table align-middle table-bordered table-responsive table-hover rounded">
-                                        <thead class="point-table-head">
-                                            <tr>
-                                                <th class="text-left">No</th>
-                                                <th class="text-left">TEAM</th>
-                                                <th class="text-center">P</th>
-                                                <th class="text-center">W</th>
-                                                <th class="text-center">D</th>
-                                                <th class="text-center">L</th>
-                                                <th class="text-center">GS</th>
-                                                <th class="text-center">GA</th>
-                                                <th class="text-center">+/-</th>
-                                                <th class="text-center">PTS</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-center">
-                                            @if(isset($league['data']['standings'])){
-                                                @foreach($league['data']['standings'] as $standings)
-                                            <tr>
-                                                <td class="text-left number">{{$loop->index+1}}</td>
-                                                <td class="text-left">
-                                                    @if(isset($standings['team']['logos'][0]['href']))
-                                                        <img src="{{$standings['team']['logos'][0]['href']}}">
-                                                    
-                                                    @else
-                                                    <img src="{{ URL::asset('img/teamlogoplaceholder.png')}}">
-                                                    @endif
-                                                    <span>{{$standings['team']['name']}}</span>
-                                                </td>
-                                                <td>{{$standings['stats'][3]['displayValue']}}</td>
-                                                <td>{{$standings['stats'][0]['displayValue']}}</td>
-                                                <td>{{$standings['stats'][2]['displayValue']}}</td>
-                                                <td>{{$standings['stats'][1]['displayValue']}}</td>
-                                                <td>{{$standings['stats'][4]['displayValue']}}</td>
-                                                <td>{{$standings['stats'][5]['displayValue']}}</td>
-                                                <td>{{$standings['stats'][3]['displayValue']}}</td>
-                                                <td>{{$standings['stats'][9]['displayValue']}}</td>
-                                            </tr>
-                                            @endforeach
-                                            }
-                                            @else
-                                            <h1>EMPTY</h1>
-                                            @endif                                            
-                                        </tbody>
-                                    </table>
+                                <div class="author-image-large">
+                                    <img src="{{$logo}}" >
                                 </div>
+                                @if(isset($league['data']['standings']))
+                                <table class="table align-middle table-bordered table-responsive table-hover rounded">
+                                    <thead class="point-table-head">
+                                        <tr>
+                                            <th class="text-left">No</th>
+                                            <th class="text-left">TEAM</th>
+                                            <th class="text-center">P</th>
+                                            <th class="text-center">W</th>
+                                            <th class="text-center">D</th>
+                                            <th class="text-center">L</th>
+                                            <th class="text-center">GS</th>
+                                            <th class="text-center">GA</th>
+                                            <th class="text-center">+/-</th>
+                                            <th class="text-center">PTS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                        @foreach($league['data']['standings'] as $standings)
+                                        <tr>
+                                            <td class="text-left number">{{$loop->index+1}}</td>
+                                            <td class="text-left">
+                                                @if(isset($standings['team']['logos'][0]['href']))
+                                                <img src="{{$standings['team']['logos'][0]['href']}}">
+
+                                                @else
+                                                <img src="{{ URL::asset('img/teamlogoplaceholder.png')}}">
+                                                @endif
+                                                <span>{{$standings['team']['name']}}</span>
+                                            </td>
+                                            <td>{{$standings['stats'][3]['displayValue']}}</td>
+                                            <td>{{$standings['stats'][0]['displayValue']}}</td>
+                                            <td>{{$standings['stats'][2]['displayValue']}}</td>
+                                            <td>{{$standings['stats'][1]['displayValue']}}</td>
+                                            <td>{{$standings['stats'][4]['displayValue']}}</td>
+                                            <td>{{$standings['stats'][5]['displayValue']}}</td>
+                                            <td>{{$standings['stats'][3]['displayValue']}}</td>
+                                            <td>{{$standings['stats'][9]['displayValue']}}</td>
+                                        </tr>
+                                        @endforeach                                        
+                                        @else
+                                        <h1>EMPTY</h1>
+                                        
+                                    </tbody>
+                                </table>
+                                @endif
                             </div>
                         </div>
                     </div> <!-- /.row -->

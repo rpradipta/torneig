@@ -14,18 +14,8 @@ use App\Http\Controllers\LeagueController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('landing');
 });
-
-// Route::get('/eng1', function () {
-//     // $standings = Http::get('https://api-football-standings.azharimm.site/leagues/eng.1/standings');
-//     // $leagueInfo = Http::get('https://api-football-standings.azharimm.site/leagues/eng.1');
-//     // $league = json_decode($standings->body(),true);   
-//     // $info = json_decode($leagueInfo->body(),true);
-//     // return view('leaguestandings', ['league' => $league, 'name'=> $info['data']['name'], 'logo' => $info['data']['logos']['dark']]);
-// });
-
 Route::get('/league/{id}', [LeagueController::class, 'standings']);
-
 Route::get('/league',[LeagueController::class, 'league']);
 

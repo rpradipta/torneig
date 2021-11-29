@@ -71,7 +71,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="./eng1" class="hex-content">
+                                        <a href="./league/eng.1" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="tf-dial"></i>
