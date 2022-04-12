@@ -30,7 +30,7 @@
                             <a class="nav-link active" aria-current="page" href="../">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./league/eng.1">League</a>
+                            <a class="nav-link" href="./league/eng.1/2021">League</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button"

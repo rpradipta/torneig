@@ -16,6 +16,6 @@ use App\Http\Controllers\LeagueController;
 Route::get('/', function () {
     return view('landing');
 });
-Route::get('/league/{id}', [LeagueController::class, 'standings']);
+Route::get('/league/{id}/{season}', [LeagueController::class, 'standings']);
 Route::get('/league',[LeagueController::class, 'league']);
 

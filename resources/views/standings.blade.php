@@ -10,7 +10,8 @@
 </head>
 
 
-<body class="pt-5" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/field.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+<body class="pt-5"
+    style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/field.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
     <nav class="navbar navbar-dark fixed-top">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -48,7 +49,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
+                    <form class="d-flex" >
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
@@ -65,16 +66,35 @@
                     id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     {{$name}}
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <ul class="dropdown-menu bg-secondary" aria-labelledby="dropdownMenuButton1">
                     @foreach($list['data'] as $data)
                     @if($id == $data['id'])
-                    <li><a class="dropdown-item disabled">{{$data['name']}}</a></li>
+                    <li><a class="dropdown-item text-white disabled">{{$data['name']}}</a></li>
                     @else
-                    <li><a class="dropdown-item" href="/league/{{$data['id']}}">{{$data['name']}}</a></li>
+                    <li><a class="dropdown-item text-white" href="/league/{{$data['id']}}">{{$data['name']}}</a></li>
                     @endif
                     @endforeach
-                </ul>
-            </div>
+                </ul>                
+            </div>    
+            
+                <div class="pb-4 dropdown">
+                    <button class="btn btn-secondary dropdown-toggle border rounded-pill" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        @if(isset($league['data']['season']))
+                        {{$league['data']['season']}}
+                        @else
+                        no data
+                        @endif
+                    </button>
+                    <ul class="dropdown-menu bg-secondary" aria-labelledby="dropdownMenuButton1">
+                        @for($i = 2021;$i > 2003; $i--)                        
+                        <li><a class="dropdown-item text-white" href="/league/{{$id}}/{{$i}}">{{$i}}</a></li>                       
+                        @endfor
+                    </ul>                
+                </div>  
+                <div class="card-body"></div>
+           
+                
             <h2>{{$name}} Table</h2>
             <br>
             <table class="text-white table table-bordered table-hover">
@@ -123,8 +143,8 @@
                             <td>{{$standings['stats'][1]['displayValue']}}</td>
                             <td>{{$standings['stats'][4]['displayValue']}}</td>
                             <td>{{$standings['stats'][5]['displayValue']}}</td>
-                            <td>{{$standings['stats'][3]['displayValue']}}</td>
                             <td>{{$standings['stats'][9]['displayValue']}}</td>
+                            <td>{{$standings['stats'][6]['displayValue']}}</td>
                         </tr>
                         @endforeach
                         @else
@@ -140,14 +160,15 @@
 </body>
 <script>
     var nav = document.querySelector('nav');
-    window.addEventListener('scroll', function(){
-        if(window.pageYOffset > 100){            
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
             nav.classList.add('bg-secondary', 'shadow');
             nav.style.transitionDuration = "0.5s";
         }
-        else{
+        else {
             nav.classList.remove('bg-secondary', 'shadow');
         }
     })
 </script>
+
 </html>
